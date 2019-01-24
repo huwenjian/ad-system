@@ -12,6 +12,9 @@
 
 
 ### 启动Eureka集群
+    mvn spring-boot:run 
+    or mvn package
+    then->
     java -jar ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server1
     java -jar ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server2
     java -jar ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server3
@@ -26,4 +29,6 @@
     3 post   filters  
     4 error  filters
     5 custom filters
+    
+    
         
