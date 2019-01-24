@@ -15,3 +15,15 @@
     java -jar ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server1
     java -jar ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server2
     java -jar ad-eureka-1.0-SNAPSHOT.jar --spring.profiles.active=server3
+
+
+### API 网关方式
+    client -> API Gateway -> rest api~
+        
+    Zuul的生命周期
+    1 pre    filters 
+    2 router filters
+    3 post   filters  
+    4 error  filters
+    5 custom filters
+        
