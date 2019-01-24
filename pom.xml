@@ -12,6 +12,7 @@
     <!-- 写在这里 父工程对子项目进行管理-->
     <modules>
         <module>ad-eureka</module>
+        <module>ad-gateway</module>
     </modules>
 
 
