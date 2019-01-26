@@ -105,3 +105,4 @@ town.txt.bin
 /data-process/.rebel-remote.xml.bak
 /search-web/yarn.lock
 /*/target/
+*/*/target/
