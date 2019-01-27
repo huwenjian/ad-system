@@ -1,4 +1,4 @@
-package com.createtom.ad.vo;
+package com.createtom.ad.vo.aduservo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import org.springframework.util.StringUtils;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateUserRequest {
+public class CreateAdUserRequest {
 
     private String username;
 

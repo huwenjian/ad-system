@@ -6,8 +6,8 @@ import com.createtom.ad.entity.AdUser;
 import com.createtom.ad.exception.AdException;
 import com.createtom.ad.service.IUserService;
 import com.createtom.ad.utils.CommonUtils;
-import com.createtom.ad.vo.CreateUserRequest;
-import com.createtom.ad.vo.CreateUserResponse;
+import com.createtom.ad.vo.aduservo.CreateAdUserRequest;
+import com.createtom.ad.vo.aduservo.CreateAdUserResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +36,7 @@ public class UserServiceImpl implements IUserService {
      */
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public CreateUserResponse createUser(CreateUserRequest request)
+    public CreateAdUserResponse createUser(CreateAdUserRequest request)
             throws AdException {
 
         if (!request.validate()) {
@@ -54,7 +54,7 @@ public class UserServiceImpl implements IUserService {
                 CommonUtils.md5(request.getUsername())
         ));
 
-        return new CreateUserResponse(
+        return new CreateAdUserResponse(
                 newUser.getId(), newUser.getUsername(), newUser.getToken(),
                 newUser.getCreateTime(), newUser.getUpdateTime()
         );

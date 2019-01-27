@@ -1,4 +1,4 @@
-package com.createtom.ad.vo;
+package com.createtom.ad.vo.aduservo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,12 +12,12 @@ import java.util.Date;
  * Modify:
  *
  * @author huwenjian
- * @// TODO: 2019/1/27 why not use AdUser.Object,why create CreateUserResponse.class
+ * @// TODO: 2019/1/27 why not use AdUser.Object,why create CreateAdUserResponse.class
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateUserResponse {
+public class CreateAdUserResponse {
 
     private Long userId;
     private String username;
