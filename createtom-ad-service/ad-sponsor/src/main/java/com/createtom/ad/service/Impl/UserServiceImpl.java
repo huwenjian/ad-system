@@ -11,8 +11,7 @@ import com.createtom.ad.vo.CreateUserResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Date: 2019/1/27 22:11
@@ -25,25 +24,39 @@ import javax.transaction.Transactional;
 @Service
 public class UserServiceImpl implements IUserService {
 
-    @Autowired
-    private AdUserRepository adUserRepository;
+    private final AdUserRepository userRepository;
 
+    @Autowired
+    public UserServiceImpl(AdUserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    /**
+     * https://www.cnblogs.com/clwydjgs/p/9317849.html
+     */
     @Override
-    @Transactional
-    public CreateUserResponse createUser(CreateUserRequest request) throws AdException {
+    @Transactional(rollbackFor = Exception.class)
+    public CreateUserResponse createUser(CreateUserRequest request)
+            throws AdException {
 
         if (!request.validate()) {
             throw new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
         }
 
-        AdUser oldUser = adUserRepository.findByUsername(request.getUsername());
+        AdUser oldUser = userRepository.
+                findByUsername(request.getUsername());
         if (oldUser != null) {
             throw new AdException(Constants.ErrorMsg.SAME_NAME_ERROR);
         }
 
-        AdUser newAdUser = adUserRepository.save(new AdUser(request.getUsername(), CommonUtils.md5(request.getUsername())));
+        AdUser newUser = userRepository.save(new AdUser(
+                request.getUsername(),
+                CommonUtils.md5(request.getUsername())
+        ));
 
-
-        return new CreateUserResponse(newAdUser.getId(), newAdUser.getUsername(), newAdUser.getToken(), newAdUser.getCreateTime(), newAdUser.getUpdateTime());
+        return new CreateUserResponse(
+                newUser.getId(), newUser.getUsername(), newUser.getToken(),
+                newUser.getCreateTime(), newUser.getUpdateTime()
+        );
     }
 }
