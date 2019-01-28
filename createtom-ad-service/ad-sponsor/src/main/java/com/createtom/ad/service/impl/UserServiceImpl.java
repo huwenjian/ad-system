@@ -1,4 +1,4 @@
-package com.createtom.ad.service.Impl;
+package com.createtom.ad.service.impl;
 
 import com.createtom.ad.constant.Constants;
 import com.createtom.ad.dao.AdUserRepository;
