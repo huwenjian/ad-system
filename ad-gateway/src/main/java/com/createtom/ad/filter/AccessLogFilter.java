@@ -8,7 +8,6 @@ import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.logging.Logger;
 
 /**
  * By  : HuWenJ
@@ -21,7 +20,7 @@ import java.util.logging.Logger;
 @Slf4j
 @Component
 public class AccessLogFilter extends ZuulFilter {
-    Logger logger;
+
 
     @Override
     public String filterType() {
@@ -45,7 +44,7 @@ public class AccessLogFilter extends ZuulFilter {
         Long startTime = (Long) requestContext.get("startTime");
         String url = request.getRequestURI();
         long duration = System.currentTimeMillis() - startTime;
-        logger.info("uri: " + url + ", duration: " + duration / 100 + "ms");
+        log.info("uri: " + url + ", duration: " + duration / 100 + "ms");
 
         return null;
     }
