@@ -2,10 +2,10 @@ package com.createtom.ad.vo.creative;
 
 import com.createtom.ad.constant.CommonStatus;
 import com.createtom.ad.entity.Creative;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.Date;
 
@@ -31,6 +31,12 @@ public class CreativeRequest {
     private Integer duration;
     private Long userId;
     private String url;
+
+    public boolean validate() {
+        return !StringUtils.isEmpty(name)
+                && null != userId
+                && null != type;
+    }
 
     public Creative convertToEntity() {
 

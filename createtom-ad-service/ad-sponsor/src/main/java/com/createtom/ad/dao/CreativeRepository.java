@@ -12,4 +12,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @todo: 用jpa相对于mybatis 手写sql 来说 慢一点
  */
 public interface CreativeRepository extends JpaRepository<Creative, Long> {
+    Creative findByName(String name);
 }
