@@ -1,4 +1,4 @@
-package com.createtom.ad.vo.creative;
+package com.createtom.ad.vo.creativevo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.createtom.ad.vo.creative;
+package com.createtom.ad.vo.creativevo;
 
 import com.createtom.ad.constant.CommonStatus;
 import com.createtom.ad.entity.Creative;
