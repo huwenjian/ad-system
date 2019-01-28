@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CreativeOpController {
 
-    final ICreativeService iCreativeService;
+    private final ICreativeService iCreativeService;
 
     @Autowired
     public CreativeOpController(ICreativeService iCreativeService) {
