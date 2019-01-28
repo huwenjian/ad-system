@@ -1,4 +1,4 @@
-package com.createtom.ad.entity.unit_condition;
+package com.createtom.ad.entity.unitcondition;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -42,11 +42,10 @@ public class AdUnitDistrict {
     private String county;
 
 
-    public AdUnitDistrict(Long unitId, String province, String city, String county) {
+    public AdUnitDistrict(Long unitId, String province, String city) {
         this.unitId = unitId;
         this.province = province;
         this.city = city;
-        this.county = county;
     }
 
 }

@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  * Date: 2019/1/27 11:45
- * Description: da_user  table
+ * Description: ad_user  table
  * Modify:
  *
  * @author huwenjian

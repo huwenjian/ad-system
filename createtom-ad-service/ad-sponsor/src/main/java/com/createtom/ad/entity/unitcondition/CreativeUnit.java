@@ -1,4 +1,4 @@
-package com.createtom.ad.entity.unit_condition;
+package com.createtom.ad.entity.unitcondition;
 
 
 import lombok.AllArgsConstructor;
@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 /**
  * Date: 2019/1/27 21:35
- * Description: 推广单元表
+ * Description: 推广单元Mapping创意表
  * Modify:
  *
  * @author huwenjian

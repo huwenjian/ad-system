@@ -1,6 +1,6 @@
 package com.createtom.ad.dao.unit_condition;
 
-import com.createtom.ad.entity.unit_condition.CreativeUnit;
+import com.createtom.ad.entity.unitcondition.CreativeUnit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

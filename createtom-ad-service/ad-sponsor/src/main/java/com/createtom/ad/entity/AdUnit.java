@@ -18,7 +18,7 @@ import java.util.Date;
 @Table(name = "ad_unit")
 /**
  * Date: 2019/1/27 21:03
- * Description:
+ * Description: 推广单元表
  * Modify:
  *
  * @author huwenjian

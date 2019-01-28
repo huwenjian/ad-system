@@ -1,6 +1,6 @@
 package com.createtom.ad.dao.unit_condition;
 
-import com.createtom.ad.entity.unit_condition.AdUnitKeyWord;
+import com.createtom.ad.entity.unitcondition.AdUnitKeyword;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -10,5 +10,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *
  * @author huwenjian
  */
-public interface AdUnitKeywordRepository extends JpaRepository<AdUnitKeyWord, Long> {
+public interface AdUnitKeywordRepository extends JpaRepository<AdUnitKeyword, Long> {
 }

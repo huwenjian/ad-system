@@ -1,4 +1,5 @@
-package com.createtom.ad.entity.unit_condition;
+package com.createtom.ad.entity.unitcondition;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,19 +8,18 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 /**
- * Date: 2019/1/27 21:12
- * Description: 推广关键字限制表
+ * Date: 2019/1/27 21:16
+ * Description: 推广兴趣限制表
  * Modify:
  *
  * @author huwenjian
  */
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "ad_unit_keyword")
-public class AdUnitKeyWord {
+@Table(name = "ad_unit_it")
+public class AdUnitIt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -30,11 +30,12 @@ public class AdUnitKeyWord {
     private Long unitId;
 
     @Basic
-    @Column(name = "keyword", nullable = false)
-    private String keyword;
+    @Column(name = "it_tag", nullable = false)
+    private String itTag;
 
-    public AdUnitKeyWord(Long unitId, String keyword) {
+    public AdUnitIt(Long unitId, String itTag) {
         this.unitId = unitId;
-        this.keyword = keyword;
+        this.itTag = itTag;
     }
+
 }
