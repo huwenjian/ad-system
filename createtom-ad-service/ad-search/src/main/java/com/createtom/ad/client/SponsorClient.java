@@ -12,13 +12,12 @@ import java.util.List;
 
 /**
  * Date: 2019/2/27 15:41
- * Description:
+ * Description: 如果出错 服务降级到 SponsorClientHystrix.class
  * Modify:
  *
  * @author huwenjian
  */
-@FeignClient(value = "eureka-client-ad-sponsor",
-        fallback = SponsorClientHystrix.class)
+@FeignClient(value = "eureka-client-ad-sponsor", fallback = SponsorClientHystrix.class)
 public interface SponsorClient {
 
     @RequestMapping(value = "/ad-sponsor/get/adPlan", method = RequestMethod.POST)

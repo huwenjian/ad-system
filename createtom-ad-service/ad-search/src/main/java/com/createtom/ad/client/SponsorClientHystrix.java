@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * Date: 2019/2/27 15:41
- * Description:
+ * Description: 断路器 熔断
  * Modify:
  *
  * @author huwenjian
