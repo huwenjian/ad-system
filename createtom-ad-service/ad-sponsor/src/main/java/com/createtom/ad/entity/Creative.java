@@ -43,7 +43,7 @@ public class Creative {
      */
     @Basic
     @Column(name = "material_type", nullable = false)
-    private Integer materielType;
+    private Integer materialType;
     /**
      * 物料的高度
      */

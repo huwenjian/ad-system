@@ -43,7 +43,7 @@ public class CreativeRequest {
         Creative creative = new Creative();
         creative.setName(name);
         creative.setType(type);
-        creative.setMaterielType(materielType);
+        creative.setMaterialType(materielType);
         creative.setHeight(height);
         creative.setWidth(width);
         creative.setSize(size);
